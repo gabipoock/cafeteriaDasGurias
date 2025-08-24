@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafeteria das Gurias - Sabor na medida & amor em cada mordida</title>
+    <link rel="stylesheet" href="teste.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo-container">
+            <img src="assets/logocafeteria.png" 
+            alt="Cafeteria das Gurias" class="logo">
+        <h1 class="site-title">Cafeteria das Gurias</h1>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#gallery">Sobre</a></li>
+            <li><a href="#menu">Cardápio</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+        </nav>
+
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <img src="assets/aa.png" alt="Cafeteria das Gurias - Sabor na medida" class="hero-image">
+        <img src="assets/bannerMobile.png" alt="Cafeteria das Gurias - Sabor na medida" class="hero-mobile">
+    </section>
+
+    <!-- Fixed carousel section to only show banner images, removed product images -->
+    <section class="carousel-section" id="gallery">
+        <div class="carousel-container">
+            <h2 class="carousel-title">Sobre a Cafeteria das Gurias</h2>
+
+            <div class="carousel">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide">
+                        <img src="assets/1.jpeg" alt="Banner Desktop" class="carousel-image">
+                        <div class="carousel-overlay">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/2.jpeg" alt="Banner Mobile" class="carousel-image">
+                        <div class="carousel-overlay">
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/3.jpeg" alt="Nossos Bolos" class="carousel-image">
+                        <div class="carousel-overlay">
+ 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-nav">
+                <button class="carousel-btn" id="prevBtn">❮ Anterior</button>
+                <button class="carousel-btn" id="nextBtn">Próximo ❯</button>
+            </div>
+            <div class="carousel-dots" id="carouselDots">
+                <div class="carousel-dot active" data-slide="0"></div>
+                <div class="carousel-dot" data-slide="1"></div>
+                <div class="carousel-dot" data-slide="2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Updated menu section with larger images and click functionality -->
+    <section class="menu-section" id="menu">
+        <div class="menu-container">
+            <div class="menu-header">
+                <h2 class="menu-title">- Nosso Cardápio -</h2>
+                <p class="menu-subtitle">Sabores únicos preparados especialmente para você</p>
+            </div>
+            
+            <!-- Bebidas Carousel -->
+            <div class="carousel-section menu-carousel">
+                <h3 class="carousel-title">Bebidas</h3>
+                <div class="carousel-container">
+                    <div class="menu-carousel-track">
+                        <div class="menu-item" onclick="openModal('espresso')">
+                            <img src="assets/bebidas/cafepreto2.jpg" alt="Espresso" class="menu-item-image">
+                            <div class="menu-item-content">
+                                <div class="menu-item-info">
+                                    <h4>Espresso Tradicional</h4>
+                                    <p>Café puro e encorpado</p>
+                                </div>
+                                <button class="consult-btn">Consultar</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" onclick="openModal('cappuccino')">
+                            <img src="/assets/bebidas/capuccino.jpg" alt="Cappuccino" class="menu-item-image">
+                            <div class="menu-item-content">
+                                <div class="menu-item-info">
+                                    <h4>Cappuccino Cremoso</h4>
+                                    <p>Com espuma de leite vaporizado</p>
+                                </div>
+                                <button class="consult-btn">Consultar</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" onclick="openModal('suco')">
+                            <img src="/assets/bebidas/suco.avif" alt="suco" class="menu-item-image">
+                            <div class="menu-item-content">
+                                <div class="menu-item-info">
+                                    <h4>Sucos diversos</h4>
+                                    <p>Sucos naturais de vários sabores</p>
+                                </div>
+                                <button class="consult-btn">Consultar</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" onclick="openModal('mocha')">
+                            <img src="assets/bebidas/mocaccino.jpg" alt="Mocha" class="menu-item-image">
+                            <div class="menu-item-content">
+                                <div class="menu-item-info">
+                                    <h4>Mochaccino</h4>
+                                    <p>Café com chocolate e leite</p>
+                                </div>
+                                <button class="consult-btn">Consultar</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" onclick="openModal('milk-coffee')">
+                            <img src="assets/bebidas/cafecomleite.jpg" alt="Café Gelado" class="menu-item-image">
+                            <div class="menu-item-content">
+                                <div class="menu-item-info">
+                                    <h4>Café com Leite</h4>
+                                    <p>Café fresco com leite quente</p>
+                                </div>
+                                <button class="consult-btn">Consultar</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" onclick="openModal('tea')">
+                            <img src="assets/bebidas/cha.jpg" alt="Chá Verde" class="menu-item-image">
+                            <div class="menu-item-content">
+                                <div class="menu-item-info">
+                                    <h4>Chás</h4>
+                                    <p>Seleção especial de chás quentes</p>
+                                </div>
+                                <button class="consult-btn">Consultar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Doces & Bolos Carousel -->
+            <div class="carousel-section menu-carousel">
+                <h3 class="carousel-title">Doces & Bolos</h3>
+                <div class="carousel-container">
+                    <div class="menu-carousel-track">
+                        <div class="menu-item" onclick="openModal('fit-cake')">
+                            <img src="assets/doces/IMG_1261.jpg" alt="Bolo de Chocolate" class="menu-item-image">
+                            <div class="menu-item-content">
+                                <div class="menu-item-info">
+                                    <h4>Bolo Fitness</h4>
+                                    <p>Artesanal com nozes e frutas secas</p>
+                                </div>
+                                <button class="consult-btn">Consultar</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" onclick="openModal('donuts')">
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_1361.jpg-DBrMwyh6TOT5u4moV7v45AEAZ3vJ37.jpeg" alt="Donuts Gourmet" class="menu-item-image">
+                            <div class="menu-item-content">
+                                <div class="menu-item-info">
+                                    <h4>Nariz Entupido</h4>
+                                    <p>Variedade de sabores especiais</p>
+                                </div>
+                                <button class="consult-btn">Consultar</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" onclick="openModal('strawberry-tart')">
+                            <img src="/assets/doces/IMG_1339.jpg" alt="Torta de Morango" class="menu-item-image">
+                            <div class="menu-item-content">
+                                <div class="menu-item-info">
+                                    <h4>Bolos Variados</h4>
+                                    <p>Massa e cobertura deliciosas</p>
+                                </div>
+                                <button class="consult-btn">Consultar</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" onclick="openModal('cheesecake')">
+                            <img src="assets/doces/IMG_1307.jpg" alt="Cheesecake" class="menu-item-image">
+                            <div class="menu-item-content">
+                                <div class="menu-item-info">
+                                    <h4>Mini Donuts</h4>
+                                    <p>Cremosos, doces e fofinhos</p>
+                                </div>
+                                <button class="consult-btn">Consultar</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" onclick="openModal('tiramisu')">
+                            <img src="/placeholder.svg?height=200&width=300" alt="Tiramisù" class="menu-item-image">
+                            <div class="menu-item-content">
+                                <div class="menu-item-info">
+                                    <h4>Tiramisù</h4>
+                                    <p>Clássico italiano com café</p>
+                                </div>
+                                <button class="consult-btn">Consultar</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" onclick="openModal('brigadeiro-cake')">
+                            <img src="/placeholder.svg?height=200&width=300" alt="Bolo Brigadeiro" class="menu-item-image">
+                            <div class="menu-item-content">
+                                <div class="menu-item-info">
+                                    <h4>Bolo Brigadeiro</h4>
+                                    <p>Tradicional brasileiro com cobertura</p>
+                                </div>
+                                <button class="consult-btn">Consultar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Salgados Carousel -->
+            <div class="carousel-section menu-carousel">
+                <h3 class="carousel-title">Salgados</h3>
+                <div class="carousel-container">
+                    <div class="menu-carousel-track">
+                        <div class="menu-item" onclick="openModal('croissant')">
+                            <img src="/assets/salgados/IMG_1283.jpg" alt="Croissant" class="menu-item-image">
+                            <div class="menu-item-content">
+                                <div class="menu-item-info">
+                                    <h4>Croissant de Presunto</h4>
+                                    <p>Massa folhada com presunto e queijo</p>
+                                </div>
+                                <button class="consult-btn">Consultar</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" onclick="openModal('sandwich')">
+                            <img src="/assets/salgados/IMG_1302.jpg" alt="Sanduíche Natural" class="menu-item-image">
+                            <div class="menu-item-content">
+                                <div class="menu-item-info">
+                                    <h4>Pãezinhos Recheados</h4>
+                                    <p>Pão integral com ingredientes frescos</p>
+                                </div>
+                                <button class="consult-btn">Consultar</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" onclick="openModal('quiche')">
+                            <img src="/assets/salgados/IMG_1359.jpg" alt="Quiche de Queijo" class="menu-item-image">
+                            <div class="menu-item-content">
+                                <div class="menu-item-info">
+                                    <h4>Torta Fria</h4>
+                                    <p>Recheio cremoso de frango e ingredientes frescos</p>
+                                </div>
+                                <button class="consult-btn">Consultar</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" onclick="openModal('empanada')">
+                            <img src="/assets/salgados/IMG_1293.jpg" alt="Empanada" class="menu-item-image">
+                            <div class="menu-item-content">
+                                <div class="menu-item-info">
+                                    <h4>Doguinhos de Salsicha</h4>
+                                    <p>Massa crocante com recheio de salsicha'</p>
+                                </div>
+                                <button class="consult-btn">Consultar</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" onclick="openModal('coxinha')">
+                            <img src="/placeholder.svg?height=200&width=300" alt="Coxinha" class="menu-item-image">
+                            <div class="menu-item-content">
+                                <div class="menu-item-info">
+                                    <h4>Coxinha de Frango</h4>
+                                    <p>Tradicional brasileira crocante</p>
+                                </div>
+                                <button class="consult-btn">Consultar</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" onclick="openModal('pao-de-acucar')">
+                            <img src="/placeholder.svg?height=200&width=300" alt="Pão de Açúcar" class="menu-item-image">
+                            <div class="menu-item-content">
+                                <div class="menu-item-info">
+                                    <h4>Pão de Açúcar</h4>
+                                    <p>Pão de queijo mineiro tradicional</p>
+                                </div>
+                                <button class="consult-btn">Consultar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Added modal for product details -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <img id="modalImage" src="/placeholder.svg" alt="" class="modal-image">
+            <h3 id="modalTitle" class="modal-title"></h3>
+            <p id="modalDescription" class="modal-description"></p>
+            <div id="modalPrice" class="modal-price"></div>
+            <button class="modal-consult-btn" onclick="consultProduct()">Consultar Produto</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <h3>Cafeteria das Gurias - Ilha</h3>
+            <p>Sabor na medida & amor em cada mordida</p>
+            <p>📍 Endereço: R. Capitâo Coelho, 56 - Arquipélago Ilha da Pintada</p>
+            <p>📞 Telefone: (51) 99955-8529</p>
+            <p>🕒 Horário: Segunda a Sábado, 15h às 19h</p>
+            <p style="margin-top: 1rem; opacity: 0.8;">@cafeteriadasguriasilha</p>
+        </div>
+    </footer>
+
+    <script src="teste.js"></script>
+</body>
+</html>
